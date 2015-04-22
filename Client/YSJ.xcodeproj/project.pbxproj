@@ -14,6 +14,8 @@
 		A7D15A2D1AE7E8280050447A /* YSJTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D15A2C1AE7E8280050447A /* YSJTests.m */; };
 		A7D15A391AE7EA2B0050447A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D15A381AE7EA2B0050447A /* MainViewController.m */; };
 		A7D15A3C1AE7EA570050447A /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D15A3B1AE7EA570050447A /* MainView.m */; };
+		A7D15A451AE7EF180050447A /* UIView_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D15A441AE7EF180050447A /* UIView_Extensions.m */; };
+		A7D15A471AE7F2E60050447A /* UIColor_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D15A461AE7F2E60050447A /* UIColor_Extensions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,11 @@
 		A7D15A381AE7EA2B0050447A /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		A7D15A3A1AE7EA570050447A /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
 		A7D15A3B1AE7EA570050447A /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
+		A7D15A401AE7EDEC0050447A /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		A7D15A431AE7EEF60050447A /* UIView_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIView_Extensions.h; sourceTree = "<group>"; };
+		A7D15A441AE7EF180050447A /* UIView_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIView_Extensions.m; sourceTree = "<group>"; };
+		A7D15A461AE7F2E60050447A /* UIColor_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColor_Extensions.m; sourceTree = "<group>"; };
+		A7D15A481AE7F3010050447A /* UIColor_Extensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIColor_Extensions.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +89,11 @@
 		A7D15A0F1AE7E8280050447A /* YSJ */ = {
 			isa = PBXGroup;
 			children = (
+				A7D15A411AE7EE270050447A /* Utils */,
 				A7D15A361AE7E98D0050447A /* UI */,
 				A7D15A141AE7E8280050447A /* AppDelegate.h */,
 				A7D15A151AE7E8280050447A /* AppDelegate.m */,
+				A7D15A401AE7EDEC0050447A /* PrefixHeader.pch */,
 				A7D15A1D1AE7E8280050447A /* Images.xcassets */,
 				A7D15A1F1AE7E8280050447A /* LaunchScreen.xib */,
 				A7D15A101AE7E8280050447A /* Supporting Files */,
@@ -127,6 +136,17 @@
 				A7D15A3B1AE7EA570050447A /* MainView.m */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		A7D15A411AE7EE270050447A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A7D15A431AE7EEF60050447A /* UIView_Extensions.h */,
+				A7D15A441AE7EF180050447A /* UIView_Extensions.m */,
+				A7D15A481AE7F3010050447A /* UIColor_Extensions.h */,
+				A7D15A461AE7F2E60050447A /* UIColor_Extensions.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +252,8 @@
 				A7D15A161AE7E8280050447A /* AppDelegate.m in Sources */,
 				A7D15A131AE7E8280050447A /* main.m in Sources */,
 				A7D15A391AE7EA2B0050447A /* MainViewController.m in Sources */,
+				A7D15A451AE7EF180050447A /* UIView_Extensions.m in Sources */,
+				A7D15A471AE7F2E60050447A /* UIColor_Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +371,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = YSJ/PrefixHeader.pch;
 				INFOPLIST_FILE = YSJ/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -360,6 +383,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = YSJ/PrefixHeader.pch;
 				INFOPLIST_FILE = YSJ/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
